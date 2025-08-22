@@ -21,7 +21,7 @@ app.get("/bruxos/:id", (req, res) => {
         res.status(200).json(bruxo);
     } else {
         res.status(404).json({
-        mensagem: "Bruxo não encontrado!"
+        mensagem: "ID do bruxo não encontrado!"
         })
     }
 });
@@ -36,7 +36,7 @@ toLowerCase().includes(nome));
         res.status(200).json(bruxosEncontrados);
     } else {
         res.status(404).json({
-            mensagem: "Bruxo não encontrado!"
+            mensagem: "Nenhum bruxo encontrado com esse nome!"
         })
     }
 }); 

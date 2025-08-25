@@ -1,7 +1,7 @@
 import express from "express";
 import dados from "./src/data/dados.js"
 
-const {bruxos, varinhas, animais, pocoes} = dados;
+const {bruxos, varinhas, animais, pocoes, casas} = dados;
 
 const app= express();
 const serverPort = 3000;
@@ -64,15 +64,16 @@ toLowerCase());
     }
 })
 
-app.get("/casas", (req, res) => {
-    if (casas.length > 0) {
-        res.status(200).json(casas);
-    } else {
-        res.status(404).json({
-            mensagem: "Nenhuma casa encontrada!"
-        })
-    }
-})
+app.get('/casas', (req, res) => {
+    res.json({
+      casas: [
+        { nome: "Grifinória", animal: "🦁", fundador: "Godrico Gryffindor" },
+        { nome: "Sonserina", animal: "🐍", fundador: "Salazar Slytherin" },
+        { nome: "Corvinal", animal: "🦅", fundador: "Rowena Ravenclaw" },
+        { nome: "Lufa-lufa", animal: "🦡", fundador: "Helga Hufflepuff" }
+      ]
+    });
+  });
 
 app.get("/varinhas", (req, res) => {
     if (varinhas.length > 0) {

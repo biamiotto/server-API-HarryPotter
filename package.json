@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cls && nodemon server.js"
+    "dev": "cls && nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [
     "backend",
@@ -19,5 +20,13 @@
   "dependencies": {
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biamiotto/server-API-HarryPotter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/biamiotto/server-API-HarryPotter/issues"
+  },
+  "homepage": "https://github.com/biamiotto/server-API-HarryPotter#readme"
 }
